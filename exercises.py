@@ -168,6 +168,7 @@ def determine_season():
         day = int(input('Enter the day of the month (1 - 31): '))
     except ValueError:
         print('Enter a valid integer for the day.')
+        return
     if month in ['jan','feb'] or (month == 'dec' and day >= 21) or (month == 'mar' and day <= 19):
         print(f'{month.capitalize()} {day} is in Winter.')
     elif month in ['apr','may'] or (month == 'mar' and day >= 20) or (month == 'jun' and day <= 20):
